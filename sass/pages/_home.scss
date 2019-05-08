@@ -1,0 +1,71 @@
+.section-about{
+    background-color: $color-grey-light-1;
+    padding: 40rem 0 70rem 0;
+    margin-top: -34vh; 
+    
+   
+}
+
+.section-features{
+    padding: 20rem 0;
+    background-image: linear-gradient(to right,
+      rgba(179, 219, 237, 0.803) 0%,
+      rgba(41, 185, 229, 0.803) 0%,
+      rgba(188, 224, 238, 0.797) 100%),
+          url("../img/beach-beautiful-view-exotic-1591375.jpg");
+    background-size: cover;
+    background-position: bottom;
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 35%, 65% 0, 85% 0, 100% 15%, 100% 35%, 0 100%, 100% 100%, 100% 0%);
+    clip-path: polygon(0% 0%, 0% 100%, 100% 35%, 65% 0, 85% 0, 100% 15%, 100% 35%, 0 100%, 100% 100%, 100% 0%); 
+    margin-top: -60vh; 
+ 
+
+    @include respond(tab-port){
+        -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 15%, 75% 0, 87.5% 0, 100% 7.5%, 100% 15%, 0 100%, 100% 100%, 100% 0%); 
+        clip-path: polygon(0% 0%, 0% 100%, 100% 15%, 75% 0, 87.5% 0, 100% 7.5%, 100% 15%, 0 100%, 100% 100%, 100% 0%); 
+        padding: 10rem 0;
+    }
+}
+
+.section-tours{
+    background-color: $color-grey-light-1;
+    padding: 10rem 0 30rem 0;
+
+    @include respond(tab-port) {
+        padding: 5rem 0 15rem 0;
+    }
+
+}
+
+.section-stories{
+    padding: 10rem 0 5rem 0;
+    background-color: transparent;
+    position: relative;
+    
+    @include respond(tab-port) {
+        padding: 5rem 0 1rem 0;
+    }
+}
+
+.section-book {
+    padding: 5rem 0;
+    background-image: linear-gradient(to right,
+    rgba(179, 219, 237, 0.803) 0%,
+    rgba(41, 185, 229, 0.475) 0%,
+    rgba(188, 224, 238, 0.797) 100%);
+}
+
+.book {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.893), rgba(255, 255, 255, 0.81)), url(../img/africa-african-animals-59989.jpg);
+    background-size: 100%;
+    border-radius: 3px;
+    box-shadow: $shadow-1;
+    
+   
+    &__form {
+        width: 100%;
+        padding: 6rem;
+
+        
+    }
+}

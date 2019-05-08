@@ -1,0 +1,93 @@
+.form{
+    &__group{
+        position: relative;
+        &:not(:last-child){
+            margin-bottom: 6.2rem;
+        
+        
+        @include respond (tab-port){
+            margin-bottom: 2rem;
+        }
+        }
+
+    }
+    &__input{
+        font-family: inherit;
+        font-size: 1.5rem;
+        color:inherit;
+        padding: 1rem 2rem;
+        border-radius: 2px;
+        background-color: white;
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 100%;
+        display: block;
+        transition: all .3s;
+
+
+
+        &:focus{
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba(black, .1);
+            border-bottom: 3px solid $color-primary;
+        }
+
+        &:focus:invalid{
+            border-bottom: 3px solid $color-red;
+        }
+        &::-webkit-input-placeholder{
+            color: rgba(128, 128, 128, 0.475);
+        }
+        &::-webkit-datetime-edit-text { color: $color-primary; padding: 0 0.3em };
+       
+        
+  
+        
+    }
+
+    &__label{
+        font-size: 1.3rem;
+        font-weight: 400;
+       
+        margin-bottom: .7rem;
+        display: block;
+        transition: all .3s;
+    }
+
+    &__text{
+        font-size: 1.3rem;
+        
+      
+       
+  
+       
+    }
+    
+
+    
+    
+
+    
+}
+
+
+input[type=number] { 
+      
+      margin-top: .45rem;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button{
+        -webkit-appearance: none; 
+      }
+     
+     
+      
+      
+}
+
+.to_delete{
+    @include respond (tab-port){
+        display:none;
+    }
+   
+  }

@@ -1,0 +1,191 @@
+.card{
+
+    //functionality
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 50rem;
+    @include respond(tab-port){
+        margin: 5rem 0;
+    }
+
+    &__side{
+       
+        height: 50rem;
+        transition: all .5s;
+        position: absolute;
+        left:0;
+        top: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px; 
+        box-shadow: $shadow-1;
+        overflow: hidden;
+
+
+        &--front{
+            background-color: white;
+            z-index: 200;
+
+            
+    
+        }
+        &--down{
+         
+            &-1{
+                background-image: linear-gradient(to right, #d1f2fc, #74BFEC);
+            }
+            &-2{
+                background-image: linear-gradient(to right,$color-green-light, $color-green-dark);
+            }
+            &-3{
+                background-image: linear-gradient(to right, $color-secondary-light, $color-secondary-dark);
+            }
+            
+            .btn{
+                position: absolute;
+                top: 86.1%;
+                left: 21%;
+                
+                
+            }
+            @include respond(tab-port){
+                transform: translateY(8rem);
+               
+            }
+            
+           
+
+            
+         
+    }
+    
+    }
+   
+
+  
+    &:hover &__side--down{
+        transform: translateY(8rem);
+      
+      
+
+    }
+    &:hover &__side--front{
+        
+        box-shadow: none;
+      
+
+    }
+
+    &__picture{
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+
+        &--1{
+            background-image: linear-gradient(to right, rgba(207, 241, 251, 0.495),  rgba(43, 191, 228, 0.518)), url("../img/beach-chairs-coconut-trees-hut-261204.jpg");
+        }
+        &--2{
+            background-image: linear-gradient(to right, rgba(136, 225, 166, 0.509),  #28b485), url("../img/jefferson-santos-450387-unsplash.jpg");
+        }
+        &--3{
+            background-image: linear-gradient(to right, rgba(246, 180, 49, 0.208), rgba(252, 75, 26, 0.208)), url("../img/bay-beach-candles-872831.jpg");
+        }
+    }
+    &__inside{
+        
+        text-transform: uppercase;
+        
+        position: absolute;
+        top: 20rem;
+        left: 6rem;
+        background-color: rgb(255, 255, 255);
+        height: 32rem;
+        padding: 2rem 3rem; 
+         
+        width: 86%;
+
+        
+        
+        &--heading{
+            color: $color-grey-dark;
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-top: -1rem;
+            position: relative;
+
+            &-1::before{
+                @include bullets;
+                
+                border-left: 2px solid $color-primary-light-2 ;
+              
+    
+            }
+            &-2::before{
+                @include bullets;
+                border-left: 2px solid $color-green-light ;
+                
+    
+            }
+            &-3::before{
+                @include bullets;
+                border-left: 2px solid $color-secondary-light;
+                
+    
+            }
+        
+            
+            
+         }
+
+         &--price{
+            font-size: 1.3rem;
+            margin-top: -.8rem;
+            
+         }
+        &--details{
+            ul{
+                list-style: none;
+                width: 65%;
+
+                .ul-1{
+                    li::before{
+                        @include bullets2;
+                        color: $color-primary-light-2;
+                    }
+                }
+                .ul-2{
+                    li::before{
+                     @include bullets2;
+                     color: $color-green-light;
+                    }
+                }
+                .ul-3{
+                    li::before{
+                        @include bullets2;
+                        color: $color-secondary-light;
+                    }
+                }
+
+
+                li{
+                    font-size: 1.5rem;
+                    padding: 1rem 0;
+
+                    &:not(:last-child){
+                        border-bottom: 1px solid #eee;
+                    }   
+                 
+               
+
+                }
+            }
+        }
+        
+       
+    }
+    
+    
+
+    
+}
